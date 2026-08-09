@@ -1,7 +1,9 @@
-pull_request_rules:
-  - name: BB deployment boundary
-    conditions:
-      - title = BB deployment gate canary
-    actions:
-      merge:
-        method: merge
+merge_protections_settings:
+  reporting_method: check-runs
+
+merge_protections:
+  - name: BB exact-head staging deployment
+    if:
+      - base = main
+    success_conditions:
+      - deployment-success = staging
