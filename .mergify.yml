@@ -1,0 +1,7 @@
+pull_request_rules:
+  - name: BB deployment boundary
+    conditions:
+      - title = BB deployment gate canary
+    actions:
+      merge:
+        method: merge
