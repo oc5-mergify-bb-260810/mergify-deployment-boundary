@@ -1,0 +1,10 @@
+name: BB Staging Deployment
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: bb-staging-deploy
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: echo "BB staging deployment"
