@@ -1,12 +1,9 @@
 merge_protections_settings:
   reporting_method: check-runs
-  post_comment: false
-  auto_merge_conditions:
-    - title = H1_REQUIRED_DEPLOYMENT_MP_TRIGGER_20260812
 
 merge_protections:
-  - name: H1 required deployment exact-consumer gate
+  - name: BB exact-head staging deployment
     if:
       - base = main
     success_conditions:
-      - base = main
+      - deployment-success = staging
